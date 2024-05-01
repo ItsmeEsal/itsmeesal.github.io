@@ -165,7 +165,7 @@ nav .container .hamburger-btn section {
   border-radius: 1rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   nav .container {
     padding: 0 3rem;
   }
@@ -175,5 +175,11 @@ nav .container .hamburger-btn section {
 
   nav .container .hamburger-btn {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .container {
+    padding: 0 1.5rem;
   }
 }
