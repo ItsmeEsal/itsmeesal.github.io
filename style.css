@@ -165,15 +165,9 @@ nav .container .hamburger-btn section {
   border-radius: 1rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 787px) {
   nav .container {
-    padding: 0 3rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  nav .container {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
   nav .container .navbar-item {
     display: none;
