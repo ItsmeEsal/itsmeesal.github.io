@@ -32,19 +32,15 @@
         </div>
       </div>
     </nav>
-    <section class="jumbotron">
+    <section class="jumbotron" id="home">
       <div class="container">
         <div class="mypic">
-          <img src="mycat.png" alt="My Image" />
+          <img alt="My Image" id="mypic" />
         </div>
         <div class="desc">
-          <h1>Hi, It's me Esal.</h1>
-          <p>
-            Since 2017, I have been learning 3D and game development, and I've
-            also dabbled a bit in web development. Currently, I am still
-            learning, but my focus has shifted towards AI, such as Stable
-            Diffusion, LLM, and more..
-          </p>
+          <h1 class="typewriter">Hi, It's me Esal.</h1>
+          <p>Freelancer | Game developer</p>
+          <p></p>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -55,11 +51,25 @@
         ></path>
       </svg>
     </section>
+    <section id="about">
+      <div class="container">
+        <h1 class="poppins-semibold">About me</h1>
+        <div class="desc">
+          <section>Education</section>
+          <div class="list-edu">
+            <p>2009 - 2015 <br />MI Al Raudlah</p>
+            <p>2015 - 2018 <br />MTsN 1 Kelayan</p>
+            <p>2018 - 2021 <br />MTsN 1 Kelayan</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <script>
     const hamburgerBtn = document.querySelector(".hamburger-btn");
     hamburgerBtn.addEventListener("click", () => {
       hamburgerBtn.classList.toggle("active");
     });
+    document.querySelector("#mypic").src = "mycat.png";
   </script>
 </html>
