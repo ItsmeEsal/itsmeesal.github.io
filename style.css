@@ -165,6 +165,45 @@ nav .container .hamburger-btn section {
   border-radius: 1rem;
 }
 
+section.jumbotron {
+  background-color: #b0aef2;
+  width: 100%;
+}
+
+section.jumbotron .container {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem 5rem;
+}
+section.jumbotron .container .mypic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.jumbotron .container .mypic img {
+  border-radius: 100%;
+  width: 300px;
+  border: 3px solid #fff;
+}
+
+section.jumbotron .container .desc {
+  width: 100%;
+}
+
+section.jumbotron .container .desc h1 {
+  font-size: 2rem;
+  color: #eee;
+}
+
+section.jumbotron .container .desc p {
+  font-size: 1.3rem;
+  color: #eee;
+}
+
 @media screen and (max-width: 787px) {
   nav .container {
     padding: 0 2rem;
@@ -175,6 +214,20 @@ nav .container .hamburger-btn section {
 
   nav .container .hamburger-btn {
     display: flex;
+  }
+
+  section.jumbotron .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  section.jumbotron .container .mypic img {
+    width: 250px;
+  }
+  section.jumbotron .container .desc h1 {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
