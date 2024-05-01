@@ -17,6 +17,11 @@
     <nav>
       <div class="container">
         <a href="/" class="mytitle pacifico-regular">ItsmeEsal</a>
+        <div class="hamburger-btn">
+          <section></section>
+          <section></section>
+          <section></section>
+        </div>
         <div class="navbar-item">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -24,11 +29,6 @@
             <li><a href="#project">Project</a></li>
             <li><a href="#gear">Gear</a></li>
           </ul>
-        </div>
-        <div class="hamburger-btn">
-          <section></section>
-          <section></section>
-          <section></section>
         </div>
       </div>
     </nav>
@@ -56,4 +56,10 @@
       </svg>
     </section>
   </body>
+  <script>
+    const hamburgerBtn = document.querySelector(".hamburger-btn");
+    hamburgerBtn.addEventListener("click", () => {
+      hamburgerBtn.classList.toggle("active");
+    });
+  </script>
 </html>

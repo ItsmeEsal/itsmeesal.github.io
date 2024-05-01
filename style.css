@@ -112,6 +112,13 @@
   font-style: italic;
 }
 
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
 nav .container {
   display: flex;
   height: 70px;
@@ -132,6 +139,8 @@ nav .container .navbar-item {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  transition: all 0.5s;
+  z-index: -1;
 }
 
 nav .container .navbar-item ul {
@@ -163,6 +172,7 @@ nav .container .hamburger-btn section {
   width: 1rem;
   background-color: #fff;
   border-radius: 1rem;
+  transition: 0.5s;
 }
 
 section.jumbotron {
@@ -209,11 +219,48 @@ section.jumbotron .container .desc p {
     padding: 0 2rem;
   }
   nav .container .navbar-item {
-    display: none;
+    position: absolute;
+    top: -100rem;
+    left: 0;
   }
 
   nav .container .hamburger-btn {
     display: flex;
+  }
+
+  nav .container .hamburger-btn.active {
+    gap: 0;
+  }
+
+  nav .container .hamburger-btn.active section {
+    rotate: 45deg;
+    transform: translate(0px, 2px);
+  }
+  nav .container .hamburger-btn.active section:nth-last-child(3) {
+    display: none;
+  }
+  nav .container .hamburger-btn.active section:last-child {
+    rotate: -45deg;
+    transform: translate(0px, -2px);
+  }
+
+  nav .container .hamburger-btn.active + .navbar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #5956a8;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 200px;
+    align-items: center;
+  }
+
+  nav .container .hamburger-btn.active + .navbar-item ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem 0px;
   }
 
   section.jumbotron .container {
