@@ -222,6 +222,7 @@ section.jumbotron .container .desc p {
     position: absolute;
     top: -100rem;
     left: 0;
+    display: flex;
   }
 
   nav .container .hamburger-btn {
@@ -260,6 +261,7 @@ section.jumbotron .container .desc p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
     gap: 0.8rem 0px;
   }
 
