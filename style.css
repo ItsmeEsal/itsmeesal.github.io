@@ -166,6 +166,9 @@ nav .container .hamburger-btn section {
 }
 
 @media screen and (max-width: 767px) {
+  nav .container {
+    padding: 0 3rem;
+  }
   nav .container .navbar-item {
     display: none;
   }
