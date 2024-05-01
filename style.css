@@ -150,3 +150,27 @@ nav .container .navbar-item ul li a {
 nav .container .navbar-item ul li a:hover {
   color: #fff;
 }
+
+nav .container .hamburger-btn {
+  flex-direction: column;
+  gap: 3px 0;
+  cursor: pointer;
+  display: none;
+}
+
+nav .container .hamburger-btn section {
+  height: 3px;
+  width: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  nav .container .navbar-item {
+    display: none;
+  }
+
+  nav .container .hamburger-btn {
+    display: flex;
+  }
+}
