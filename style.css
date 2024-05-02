@@ -227,25 +227,33 @@ section#about {
 }
 
 section#about .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   gap: 3rem 0;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section#about .container h1 {
   font-size: 2rem;
+  text-align: center;
+}
+
+section#about .container .desc {
+  max-width: 500px;
+  width: 100%;
+  /* background-color: red; */
+  padding: 0 2rem;
 }
 
 section#about .container .desc-school {
-  display: flex;
+  /* display: flex;
   width: 100%;
   justify-content: center;
   max-width: 70vw;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.2rem; */
 }
 
 section#about .container .desc-school .list-edu {
@@ -257,6 +265,9 @@ section#about .container .desc-school .list-edu {
 section#about .container .desc-school .list-edu ul {
   position: relative;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
 }
 
 section#about .container .desc-school .list-edu ul li:not(:last-child)::before {
@@ -273,21 +284,21 @@ section#about .container .desc-school .list-edu ul li::after {
   content: "";
   position: absolute;
   left: 1.2rem;
-  top: calc(100% -5rem);
+  top: calc(100%-1px);
   width: 10px;
   height: 10px;
   background-color: #333;
   border-radius: 50%;
 }
 
-section#about .container .desc-bio {
+/* section#about .container .desc-bio {
   display: flex;
   width: 100%;
   justify-content: center;
   max-width: 70vw;
   gap: 2rem;
   font-size: 1.2rem;
-}
+} */
 
 @media screen and (max-width: 952px) {
   nav .container {
@@ -348,9 +359,6 @@ section#about .container .desc-bio {
   section.jumbotron .container .desc h1 {
     text-align: center;
     margin-bottom: 1rem;
-  }
-
-  section#about .container .desc {
   }
 }
 
