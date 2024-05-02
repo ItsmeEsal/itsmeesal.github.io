@@ -149,6 +149,7 @@ nav .container .navbar-item ul {
   list-style: none;
   justify-content: space-around;
   gap: 0px 3rem;
+  transition: all 0.5s;
 }
 
 nav .container .navbar-item ul li a {
@@ -261,11 +262,23 @@ section#about .container .desc .list-edu {
     padding: 0 2rem;
   }
   nav .container .navbar-item {
+    background-color: #5956a8;
     position: absolute;
     top: -100vh;
     left: 0;
     display: flex;
     z-index: -1;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  nav .container .navbar-item ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 0.8rem 0px;
   }
 
   nav .container .hamburger-btn {
@@ -289,23 +302,7 @@ section#about .container .desc .list-edu {
   }
 
   nav .container .hamburger-btn.active + .navbar-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #5956a8;
-    position: absolute;
     top: 70px;
-    left: 0;
-    height: 200px;
-    align-items: center;
-  }
-
-  nav .container .hamburger-btn.active + .navbar-item ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    gap: 0.8rem 0px;
   }
 
   section.jumbotron .container {
