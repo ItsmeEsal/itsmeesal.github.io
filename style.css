@@ -247,8 +247,6 @@ section#about .container .desc {
   max-width: 70vw;
   gap: 2rem;
   font-size: 1.2rem;
-  /* background-color: red; */
-  /* text-align: center; */
 }
 
 section#about .container .desc .list-edu {
@@ -354,39 +352,4 @@ section#about .container .desc .list-edu ul li::after {
       padding: 0 1.5rem;
     }
   }
-}
-
-.commit-list {
-  position: relative;
-  max-height: 400px; /* Batas ketinggian maksimum daftar */
-  overflow-y: hidden; /* Menambahkan scrollbar jika konten melebihi ketinggian maksimum */
-  margin-left: 1rem;
-}
-
-.commit {
-  padding: 10px;
-  position: relative;
-}
-
-.commit::after {
-  content: "";
-  position: absolute;
-  top: calc(100% - 3rem); /* Adjust the position of the circles */
-  left: 0px; /* Adjust the position of the circles */
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #333; /* Warna lingkaran */
-  z-index: 1; /* Ensure circles are above the lines */
-}
-
-.commit:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  left: px; /* Adjust the position of the lines */
-  width: 3px;
-  height: calc(100%); /* Adjust the height of the lines */
-  background-color: #333; /* Warna garis */
-  z-index: 0; /* Ensure lines are below the circles */
 }
