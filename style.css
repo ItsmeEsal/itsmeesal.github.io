@@ -248,13 +248,39 @@ section#about .container .desc {
   gap: 2rem;
   font-size: 1.2rem;
   /* background-color: red; */
-  text-align: center;
+  /* text-align: center; */
 }
 
 section#about .container .desc .list-edu {
   display: flex;
   flex-direction: column;
   gap: 1rem 0;
+}
+
+section#about .container .desc .list-edu ul {
+  position: relative;
+  list-style: none;
+}
+
+section#about .container .desc .list-edu ul li:not(:last-child)::before {
+  content: "";
+  width: 3px;
+  left: 1.4rem;
+  top: 0rem;
+  height: calc(100%);
+  position: absolute;
+  background-color: #333;
+}
+
+section#about .container .desc .list-edu ul li::after {
+  content: "";
+  position: absolute;
+  left: 1.2rem;
+  top: calc(100% -5rem);
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 952px) {
@@ -328,4 +354,39 @@ section#about .container .desc .list-edu {
       padding: 0 1.5rem;
     }
   }
+}
+
+.commit-list {
+  position: relative;
+  max-height: 400px; /* Batas ketinggian maksimum daftar */
+  overflow-y: hidden; /* Menambahkan scrollbar jika konten melebihi ketinggian maksimum */
+  margin-left: 1rem;
+}
+
+.commit {
+  padding: 10px;
+  position: relative;
+}
+
+.commit::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 3rem); /* Adjust the position of the circles */
+  left: 0px; /* Adjust the position of the circles */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333; /* Warna lingkaran */
+  z-index: 1; /* Ensure circles are above the lines */
+}
+
+.commit:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: px; /* Adjust the position of the lines */
+  width: 3px;
+  height: calc(100%); /* Adjust the height of the lines */
+  background-color: #333; /* Warna garis */
+  z-index: 0; /* Ensure lines are below the circles */
 }
