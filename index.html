@@ -54,7 +54,7 @@
     <section id="about">
       <div class="container">
         <h1 class="poppins-semibold">About me</h1>
-        <div class="desc">
+        <div class="desc desc-school">
           <section>Education</section>
           <div class="list-edu">
             <ul>
@@ -63,6 +63,14 @@
               <li>2018 - 2021 <br />SMKN 1 Banjarmasin</li>
             </ul>
           </div>
+        </div>
+        <div class="desc desc-bio">
+          <p>
+            "Since 2017, I have been learning 3D and game development, and I've
+            also dabbled a bit in web development. Currently, I am still
+            learning, but my focus has shifted towards AI, such as Stable
+            Diffusion, LLM, and more."
+          </p>
         </div>
       </div>
     </section>
@@ -78,7 +86,6 @@
             event.target == navChild.children[index] ||
             event.target == navChild
           ) {
-            console.log("sama");
           } else {
             if (index == navChild.children.length - 1)
               hamburgerBtn.classList.remove("active");
