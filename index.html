@@ -15,7 +15,7 @@
   </head>
   <body>
     <nav>
-      <div class="container">
+      <div class="container" id="nav-container">
         <a href="/" class="mytitle pacifico-regular">ItsmeEsal</a>
         <div class="hamburger-btn">
           <section></section>
@@ -67,9 +67,34 @@
   </body>
   <script>
     const hamburgerBtn = document.querySelector(".hamburger-btn");
-    hamburgerBtn.addEventListener("click", () => {
-      hamburgerBtn.classList.toggle("active");
+    const childHamburger = hamburgerBtn.children;
+    const navChild = document.querySelector("#nav-container");
+    document.addEventListener("click", function (event) {
+      if (hamburgerBtn.classList.contains("active")) {
+        for (let index = 0; index < navChild.children.length; index++) {
+          if (
+            event.target == navChild.children[index] ||
+            event.target == navChild
+          ) {
+            console.log("sama");
+          } else {
+            if (index == navChild.children.length - 1)
+              hamburgerBtn.classList.remove("active");
+          }
+        }
+      } else {
+        for (let i = 0; i < childHamburger.length; i++) {
+          if (
+            event.target == childHamburger[i] ||
+            event.target == hamburgerBtn
+          ) {
+            hamburgerBtn.classList.toggle("active");
+            return;
+          }
+        }
+      }
     });
+
     document.querySelector("#mypic").src = "mycat.png";
   </script>
 </html>
